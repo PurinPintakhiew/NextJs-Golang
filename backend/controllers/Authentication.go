@@ -91,6 +91,7 @@ func Register(c *fiber.Ctx) error {
 
 	return c.JSON(fiber.Map{
 		"status":      true,
+		"users":       newUser,
 		"accessToken": token,
 	})
 
@@ -120,6 +121,7 @@ func Login(c *fiber.Ctx) error {
 
 	return c.JSON(fiber.Map{
 		"status":      true,
+		"users":       user,
 		"accessToken": token,
 	})
 }
